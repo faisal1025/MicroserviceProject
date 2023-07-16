@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ProductDtos": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

@@ -1,0 +1,85 @@
+version: '3.4'
+
+services:
+
+  eureka:
+    image: 'steeltoeoss/eureka-server:latest'
+    ports:
+      - '8761:8761'
+    environment:
+      - SPRING_PROFILES_ACTIVE=peer1
+      - EUREKA_INSTANCE_HOSTNAME=apigateway-eureka-1
+      - EUREKA_INSTANCE_NONSECUREPORT=8761
+      - EUREKA_CLIENT_REGISTER-WITH-EUREKA=false
+      - EUREKA_CLIENT_FETCH-REGISTRY=false
+    networks:
+      - my-network
+
+  apigateway:
+    build:
+      context: ./
+      dockerfile: APIGateway/Dockerfile
+    ports:
+    - "5007:80"
+    networks:
+    - my-network
+    environment:
+     ASPNETCORE_ENVIRONMENT: Development
+     
+
+  userservice:
+    build:
+      context: /mnt/c/Users/faisalazmi/faisal-azmi/MicroserviceProject/UserService
+      dockerfile: UserService/Dockerfile
+    ports:
+    - "5001:80" 
+    networks:
+    - my-network
+    environment:
+     - EUREKA_CLIENT_SERVICE-URL_DEFAULTZONE=http://apigateway-eureka-1:8761/eureka/
+  
+  
+  productservice:
+    build:
+      context: /mnt/c/Users/faisalazmi/faisal-azmi/MicroserviceProject/ProductService
+      dockerfile: ProductService/Dockerfile
+    ports:
+    - "5003:80" 
+    networks:
+    - my-network
+    environment:
+     - EUREKA_CLIENT_SERVICE-URL_DEFAULTZONE=http://apigateway-eureka-1:8761/eureka/
+     
+  
+  productdetailservice:
+    build:
+      context: /mnt/c/Users/faisalazmi/faisal-azmi/MicroserviceProject/ProductDetailService
+      dockerfile: ProductDetailService/Dockerfile
+    ports:
+    - "5005:80" 
+    networks:
+    - my-network
+    environment:
+     - EUREKA_CLIENT_SERVICE-URL_DEFAULTZONE=http://apigateway-eureka-1:8761/eureka/
+     
+
+  rabbitmq:
+    image: 'rabbitmq:3-management'
+    ports:
+      # The standard AMQP protocol port
+      - '5672:5672'
+      # HTTP management UI
+      - '15672:15672'
+    environment:
+      AMQP_URL: 'amqp://rabbitmq?connection_attempts=5&retry_delay=5'
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "guest"
+    networks:
+      - my-network
+  
+
+networks:
+  my-network:
+    name: my-network
+    driver: bridge
+    

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "H42CG4uXf8QcrRFo+vO0RLKciAF10vMGQwZk/L+5/AZx1gzLh7tbhDB+Akq4rwbpVg3nTccpAMyXIT5od331wg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\faisalazmi\\faisal-azmi\\MicroserviceProject\\ProductService\\ProductDtos\\ProductDtos.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\faisalazmi\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.11.1\\microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512"
+  ],
+  "logs": []
+}

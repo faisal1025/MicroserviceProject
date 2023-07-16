@@ -1,0 +1,10 @@
+C:\Users\faisalazmi\faisal-azmi\MicroserviceProject\ProductDetailService\ProductDto\bin\Debug\netcoreapp3.1\ProductDto.deps.json
+C:\Users\faisalazmi\faisal-azmi\MicroserviceProject\ProductDetailService\ProductDto\bin\Debug\netcoreapp3.1\ProductDto.dll
+C:\Users\faisalazmi\faisal-azmi\MicroserviceProject\ProductDetailService\ProductDto\bin\Debug\netcoreapp3.1\ProductDto.pdb
+C:\Users\faisalazmi\faisal-azmi\MicroserviceProject\ProductDetailService\ProductDto\obj\Debug\netcoreapp3.1\ProductDto.csproj.AssemblyReference.cache
+C:\Users\faisalazmi\faisal-azmi\MicroserviceProject\ProductDetailService\ProductDto\obj\Debug\netcoreapp3.1\ProductDto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\faisalazmi\faisal-azmi\MicroserviceProject\ProductDetailService\ProductDto\obj\Debug\netcoreapp3.1\ProductDto.AssemblyInfoInputs.cache
+C:\Users\faisalazmi\faisal-azmi\MicroserviceProject\ProductDetailService\ProductDto\obj\Debug\netcoreapp3.1\ProductDto.AssemblyInfo.cs
+C:\Users\faisalazmi\faisal-azmi\MicroserviceProject\ProductDetailService\ProductDto\obj\Debug\netcoreapp3.1\ProductDto.csproj.CoreCompileInputs.cache
+C:\Users\faisalazmi\faisal-azmi\MicroserviceProject\ProductDetailService\ProductDto\obj\Debug\netcoreapp3.1\ProductDto.dll
+C:\Users\faisalazmi\faisal-azmi\MicroserviceProject\ProductDetailService\ProductDto\obj\Debug\netcoreapp3.1\ProductDto.pdb
